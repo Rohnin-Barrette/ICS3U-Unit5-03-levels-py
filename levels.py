@@ -13,10 +13,12 @@ def level_calculator(level_input_string):
         level_string = 97
     elif level_input_string == "4":
         level_string = 90
-    elif level_input_string == "3+":
+    elif level_input_string == "4-":
         level_string = 83
-    elif level_input_string == "3":
+    elif level_input_string == "3+":
         level_string = 78
+    elif level_input_string == "3":
+        level_string = 75
     elif level_input_string == "3-":
         level_string = 71
     elif level_input_string == "2+":
@@ -51,7 +53,10 @@ def main():
     returned_percentage = level_calculator(level_input_string_from_user)
 
     # output
-    print("That would be a {}%.".format(returned_percentage))
+    if returned_percentage == -1:
+        print("Invalid Input")
+    else:
+        print("That would be a {}%.".format(returned_percentage))
 
     print("\nDone.")
 
